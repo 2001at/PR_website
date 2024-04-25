@@ -5,7 +5,7 @@
     padding-top: 5vw;
     padding-bottom: 5vw;
         
-    background-image: url("/web_assets/img/page6/page6_back.png"); /* 画像のファイルパスを指定します */
+    background-image: url("https://github.com/2001at/PR_website/blob/main/web_assets/img/page6/page6_back.png?raw=true"); /* 画像のファイルパスを指定します */
     background-size: cover; /* 画像を表示する範囲に合わせて拡大縮小します */
     background-position: center; /* 画像を中央に配置します */
     background-repeat: no-repeat; /* 画像を繰り返し表示しません */
