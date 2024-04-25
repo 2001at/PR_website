@@ -215,6 +215,7 @@
 }
 
 .detail1_left2,.detail1_center3{
+    font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -576,6 +577,7 @@
         font-size: 10px;
     }
     .detail2_top{
+        font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
         font-size: 4vw;
         width: 100%;
     }
