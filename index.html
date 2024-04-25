@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./web_assets/css/reset.css">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Corben:700" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./web_assets/css/frame.css">
+    <link rel="stylesheet" href="./web_assets/css/page1.css">
+    <link rel="stylesheet" href="./web_assets/css/page2.css">
+    <link rel="stylesheet" href="./web_assets/css/page3.css">
+    <link rel="stylesheet" href="./web_assets/css/page4.css">
+    <link rel="stylesheet" href="./web_assets/css/page5.css">
+    <link rel="stylesheet" href="./web_assets/css/page6.css">
+
+    <link rel="stylesheet" href="./web_assets/css/circle.css">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+<main>
+    <div class="all">
+
+        <!-- 1ページ目 -->
+        <div class="page1">
+            <div class="page1_left"> 
+                <div class="dai">My Portfolio</div>
+                <div class="catch_copy"><span class="material-symbols-outlined">
+                    workspace_premium
+                    </span>学長・学部長賞<p><span class="material-symbols-outlined">
+                        workspace_premium
+                        </span>国際学会</p><span class="material-symbols-outlined">
+                            workspace_premium
+                            </span>ロボカップジャパンオープン優勝・準優勝</div>
+            </div> 
+            <div id="page1_right"> 
+                <img src="./web_assets/img/page1/1page_1.png" alt="Title_img">
+            </div>
+        </div>
+
+        <!-- 2ページ目 -->
+        <div class="page2">
+            <div class="first_catch">
+                向上心！チャレンジ精神！探求心！
+            </div>
+            <div class="page2_under">
+                <div class="page2_left"> 
+                    <img src="./web_assets/img/page2/2page.png" alt="myself_img">
+                </div> 
+                <div class="page2_right"> 
+                    <p><div class="name">飯田 篤央</div></p>
+                    <p><div class="degree">大学院生</div></p>
+                    <p><div class="age">2001年大阪生まれ</div></p>
+                    <p><div class="detail_1">大阪工業大学ロボティクス＆デザイン工学部システムデザイン工学科卒業後、</div></p>
+                    <p><div class="detail_2">大学院に進学し，音声認識についての研究を行っている</div></p>
+                    <p><div class="detail_3">留学やロボコンなど，様々な経験を通して，日々成長中</div></p><br>
+                    <div class="social-icons">
+                        <!-- <a href="https://github.com/2001at" target="_blank"><i class="fa-brands fa-github "></i></a> -->
+                        <a href="https://qiita.com/2001at" target="_blank"><i class="fa-brands fa-quora fa-lg"></i></a>
+                        <a href="https://linkedin.com/in/Atsuteru-Iida" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3ページ目 -->
+        <div class="page3">
+            <div id="Modal_product_all" class="modal">
+                <div class="modal-content">
+                    <h2>使用プログラミング言語の比率</h2>
+                    <div class="github-status">
+                        <div id="ste">
+                            <canvas id="myPieChart"></canvas>
+                        </div>
+                        <script>
+                            // 使用プログラミング言語の比率データ
+                            var languages = ['Python', 'HTML&CSS', 'C', 'JavaScript', 'PHP', 'C++', 'Java', 'R'];
+                            var usage = [40, 20, 12, 10, 9, 4, 3, 2];  // それぞれの割合（%）
+                    
+                            // 円グラフを描画する関数
+                            function drawPieChart() {
+                                var ctx = document.getElementById('myPieChart').getContext('2d');
+                                var myPieChart = new Chart(ctx, {
+                                    type: 'pie',
+                                    data: {
+                                        labels: languages,
+                                        datasets: [{
+                                            data: usage,
+                                            backgroundColor: [
+                                                'rgba(255, 99, 132, 0.7)',  // Python - 赤
+                                                'rgba(54, 162, 235, 0.7)',  // HTML&CSS - 青
+                                                'rgba(255, 206, 86, 0.7)',  // C - 黄
+                                                'rgba(75, 192, 192, 0.7)',  // JavaScript - シアン
+                                                'rgba(153, 102, 255, 0.7)',  // PHP - 紫
+                                                'rgba(255, 159, 64, 0.7)',  // C++ - オレンジ
+                                                'rgba(255, 205, 86, 0.7)',  // Java - イエロー
+                                                'rgba(54, 162, 135, 0.7)',  // R - グリーン
+                                            ]
+                                        }]
+                                    },
+                                    options: {
+                                        title: {
+                                            display: true,
+                                            text: '使用プログラミング言語の比率'
+                                        }
+                                    }
+                                });
+                            }
+                    
+                            // ページ読み込み時に円グラフを描画
+                            window.onload = drawPieChart;
+                        </script>
+                    </div>
+
+                    <button id="closeButton_product_all">閉じる</button>
+                </div>
+            </div>
+
+            <div id="Modal_product_1" class="modal">
+                <div class="modal-content">
+                    <div class="detail2_all">
+                        <div class="title_name2">
+                            <!-- product１ -->
+                            <div class="slideshow-container" >
+                                <div class="mySlides5 fade">
+                                    <img src="./web_assets/img/page3/arm.jpg" alt="画像1">
+                                </div>
+                                <div class="mySlides5 fade">
+                                    <img src="web_assets/img/page3/arm_up.jpg" alt="画像1">
+                                </div>
+
+                                
+                                <a class="prev" onclick="plusSlides(-1, 'mySlides5')">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1, 'mySlides5')">&#10095;</a>
+                            </div>
+                            
+                            <script src="web_assets/js/script.js"></script> 
+                        </div>
+    
+                        
+                        <div class="detail6">
+                            <div class="key6">
+                                マジックハンドの機構を採用！
+                                <div class="key6_detail">
+                                    ・マジックハンドの機構を採用することで，裏側に取り付けたサーボモータ1つでつかむ動作が可能になりました．
+                                </div>
+                            </div>
+    
+                            <div class="key6">
+                                モータのみでの動作を実現！
+                                <div class="key6_detail">
+                                    ・縦方向に移動する４輪の車の上に，横方向に移動する車を乗せることで，モータを制御するだけの簡単な動作での制御が可能になりました．
+                                </div>  
+                            </div>
+                            <div class="detail1_under">
+                                <div class="mov">
+                                    <video src="./web_assets/img/page3/cre-n_video.mp4" controls preload="none"></video>
+                                </div>
+                                <div class="key1_1">
+                                    <!-- <div class="key6">
+                                        キーワード
+                                        <div class="key6_detail">
+                                        ・micro:bit
+                                        </div>
+                                    </div> -->
+                                    <!-- <img src="./web_assets/img/microbit.png" alt="myself_img"> -->
+                                </div>
+                            </div>                      
+                        </div>
+                    </div>
+                    <button id="closeButton_product_1">閉じる</button>
+                </div>
+            </div>
+
+
+            <div id="Modal_product_2" class="modal">
+                <div class="modal-content">
+                    <div class="detail2_all">
+                        <div class="title_name2">
+                            リアルタイム音声認識
+                            <video src="./web_assets/img/page3/whisper.mp4" controls preload="none"></video>
+                        </div>
+
+                        
+                        <div class="detail2">
+                                <div class="detail2_top">
+                                    「音声認識whisper」を使用し，リアルタイムで音声を認識し，テキストを出力する．また，認識結果を利用し，声で制御するクレーンゲームや，生成AIを利用した自動会話chatbotなど，他のproductへも利用した．
+                                </div>
+                                <div class="key2">
+                                    キーワード
+                                </div>
+                                <div class="key2_under">
+                                    <div class="key2_left">
+                                        <div class="key2_1">
+                                            Python
+                                        </div>
+                                        <div class="key2_1">
+                                            Shellscript
+                                        </div>
+                                    </div>
+                                    <div class="key2_right">
+                                        <div class="key2_1">
+                                            Linux
+                                        </div>
+                                        <div class="key2_1">
+                                            Git
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <button id="closeButton_product_2">閉じる</button>
+                </div>
+            </div>
+
+            <div id="Modal_product_3" class="modal">
+                <div class="modal-content">
+                    <div class="detail1_all">
+                        <div class="title_name3">
+                            知育玩具　カラードクター
+                        </div>
+                        
+                        <div class="detail3_under">
+                            <div class="detail1_left">
+                                <div class="detail3_left1">
+                                    <div class="detail3_left1_1">
+                                        プレゼン動画
+                                    </div>
+                                    <div class="detail3_left1_2">
+                                        <video src="./web_assets/img/page3/presentation.mp4" controls preload="none"></video>
+                                    </div>
+                                </div>
+                                <div class="detail2_left2">
+                                    <div class="detail3_left2_1">
+                                        使い方動画
+                                    </div>
+                                    <div class="detail3_left2_2">
+                                        <video src="./web_assets/img/page3/color_doc.mp4" controls preload="none"></video>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail3_center">
+                                <div class="detail1_center1">
+                                    <img src="./web_assets/img/page3/color_img.png" alt="myself_img">
+                                </div>
+                                <div class="detail1_center3">
+                                    医者になり，動物たちの病気を治すため，指定された色の薬を作成することを目的とした知育玩具．薬を作成に混色を用いることで，楽しみながら学習を促す．
+                                </div>
+                            </div>
+                            <div class="detail1_right">
+                                <div class="detail1_right1">
+                                    デモアプリQRコード
+                                </div>
+                                <div class="detail1_right2">
+                                    <img src="./web_assets/img/page3/QR.png" alt="myself_img">
+                                    <br>
+                                    リンクはこちら➢
+                                </div>
+                                <div class="key1">
+                                    キーワード
+                                </div>
+                                <div class="key1_1">
+                                    <div class="key2_under">
+                                        <div class="key2_left">
+                                            <div class="key3_1">
+                                                HTML&CSS
+                                            </div>
+                                            <div class="key3_1">
+                                                Javascript
+                                            </div>
+                                            <div class="key3_1">
+                                                WEBserial
+                                            </div>
+                                        </div>
+                                        <div class="key2_right">
+                                            <div class="key3_1">
+                                                Arduino
+                                            </div>
+                                            <div class="key3_1">
+                                                C++
+                                            </div>
+                                            <div class="key3_1">
+                                                3Dプリンタ
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button id="closeButton_product_3">閉じる</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- JavaScriptのリンク -->
+            <script>
+            // モーダルが表示されるたびに実行される関数
+            function adjustModalContent() {
+                // 背景画像の幅と高さを取得
+                var backgroundImage = document.querySelector('.modal-content').style.backgroundImage;
+                var imgSrc = backgroundImage.match(/url\(["']?([^"']*)["']?\)/)[1];
+                var tempImg = new Image();
+                tempImg.src = imgSrc;
+                var bgWidth = tempImg.width;
+                var bgHeight = tempImg.height;
+            
+                // モーダルのコンテンツに背景画像のサイズを適用
+                document.querySelector('.modal-content').style.width = bgWidth + 'px';
+                document.querySelector('.modal-content').style.height = bgHeight + 'px';
+            }
+            
+            // ページ読み込み時に実行
+            document.addEventListener('DOMContentLoaded', function() {
+                // モーダルが表示されるたびにadjustModalContent関数を実行
+                document.getElementById('Modal_product_1').addEventListener('show.bs.modal', adjustModalContent);
+            });
+            </script>
+
+
+            <div class="product1-container">
+                <div class="container">
+                    <div class="container_stay">
+                        <div class="container1">
+                            <span class="blurTrigger small_title blur">技</span>
+                            <h2 class="stay-text">IT skill</h2>
+                        </div>
+                        <div class="container_circle1" id="circle_room">
+                            <div class="circle1 openModal_product_all">
+                                <svg viewBox="0 0 120 120">
+                                    <path d="M60,0
+                                            a60,60 0 1,1 0,120
+                                            a60,60 0 0,1 0,-120"></path>
+                                    <text x="60" y="60">more</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product1">
+                    <img src="./web_assets/img/page3/3page_1.png" alt="myself_img">
+                    <div class="product1-text">
+                        <p><div class="product_name">クレーンゲーム</div></p>
+                        <p><div class="product_time">制作期間:4週間(2022)</div></p>
+                        <p><div class="product_people">学部生4人で作成</div></p>
+                    </div>
+                    <div class="add-icon openModal_product_1">+</div>
+                </div>
+            </div>
+            <div class="product2">
+                <img src="./web_assets/img/page3/3page_2.png" alt="myself_img">
+                <div class="product2-text">
+                    <p><div class="product_name">リアルタイム<br>音声認識システム</div></p>
+                    <p><div class="product_time">制作期間:3週間(2023)</div></p>
+                    <p><div class="product_people">個人で作成</div></p>
+                </div>
+                <div class="add-icon openModal_product_2">+</div>
+            </div>
+            <div class="product3">
+                <img src="./web_assets/img/page3/3page_3.png" alt="myself_img">
+                <div class="product3-text">
+                    <p><div class="product_name">知育玩具<br>カラードクター</div></p>
+                    <p><div class="product_time">制作期間:4週間(2023)</div></p>
+                    <p><div class="product_people">学部生5人で作成</div></p>
+                </div>
+                <div class="add-icon openModal_product_3">+</div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // モーダル要素と閉じるボタンの要素を取得
+                var modal_product_all = document.getElementById("Modal_product_all");
+                var closeButton_product_all = document.getElementById("closeButton_product_all");
+                var modal_product_1 = document.getElementById("Modal_product_1");
+                var closeButton_product_1 = document.getElementById("closeButton_product_1");
+                var modal_product_2 = document.getElementById("Modal_product_2");
+                var closeButton_product_2 = document.getElementById("closeButton_product_2");
+                var modal_product_3 = document.getElementById("Modal_product_3");
+                var closeButton_product_3 = document.getElementById("closeButton_product_3");
+                var modal_research= document.getElementById("Modal_research");
+                var closeButton_research = document.getElementById("closeButton_research");
+                var modal_active_1= document.getElementById("Modal_active_1");
+                var closeButton_active_1 = document.getElementById("closeButton_active_1");
+                var modal_active_2= document.getElementById("Modal_active_2");
+                var closeButton_active_2 = document.getElementById("closeButton_active_2");
+                var modal_active_3= document.getElementById("Modal_active_3");
+                var closeButton_active_3 = document.getElementById("closeButton_active_3");
+                var modal_award= document.getElementById("Modal_award");
+                var closeButton_award = document.getElementById("closeButton_award");
+                
+                // クラスがクリックされた時の処理
+                var clickableElements_product_all = document.querySelectorAll('.openModal_product_all');
+                clickableElements_product_all.forEach(function(element) {
+                    element.addEventListener("click", function() {
+                        modal_product_all.style.display = "block"; // モーダルを表示する
+                    });
+                });
+                
+                var clickableElements_product_1 = document.querySelectorAll('.openModal_product_1');
+                clickableElements_product_1.forEach(function(element) {
+                    element.addEventListener("click", function() {
+                        modal_product_1.style.display = "block"; // モーダルを表示する
+                    });
+                });
+
+                var clickableElements_product_2 = document.querySelectorAll('.openModal_product_2');
+                clickableElements_product_2.forEach(function(element) {
+                    element.addEventListener("click", function() {
+                        modal_product_2.style.display = "block"; // モーダルを表示する
+                    });
+                });
+                
+                var clickableElements_product_3 = document.querySelectorAll('.openModal_product_3');
+                clickableElements_product_3.forEach(function(element) {
+                    element.addEventListener("click", function() {
+                        modal_product_3.style.display = "block"; // モーダルを表示する
+                    });
+                });
+
+                var clickableElements_research= document.querySelectorAll('.openModal_research');
+                clickableElements_research.forEach(function(element) {
+                    element.addEventListener("click", function() {
+                        modal_research.style.display = "block"; // モーダルを表示する
+                    });
+                });
+
+                var clickableElements_active_1= document.querySelectorAll('.openModal_active_1');
+                clickableElements_active_1.forEach(function(element) {
+                    element.addEventListener("click", function() {
+                        modal_active_1.style.display = "block"; // モーダルを表示する
+                    });
+                });
+
+                var clickableElements_active_2= document.querySelectorAll('.openModal_active_2');
+                clickableElements_active_2.forEach(function(element) {
+                    element.addEventListener("click", function() {
+                        modal_active_2.style.display = "block"; // モーダルを表示する
+                    });
+                });
+                
+                var clickableElements_active_3= document.querySelectorAll('.openModal_active_3');
+                clickableElements_active_3.forEach(function(element) {
+                    element.addEventListener("click", function() {
+                        modal_active_3.style.display = "block"; // モーダルを表示する
+                    });
+                });
+
+                var clickableElements_award= document.querySelectorAll('.openModal_award');
+                clickableElements_award.forEach(function(element) {
+                    element.addEventListener("click", function() {
+                        modal_award.style.display = "block"; // モーダルを表示する
+                    });
+                });
+
+                // 閉じるボタンがクリックされた時の処理
+                closeButton_product_all.addEventListener("click", function() {
+                    modal_product_all.style.display = "none"; // モーダルを非表示にする
+                });
+                
+                closeButton_product_1.addEventListener("click", function() {
+                    modal_product_1.style.display = "none"; // モーダルを非表示にする
+                });
+
+                closeButton_product_2.addEventListener("click", function() {
+                    modal_product_2.style.display = "none"; // モーダルを非表示にする
+                });
+
+                closeButton_product_3.addEventListener("click", function() {
+                    modal_product_3.style.display = "none"; // モーダルを非表示にする
+                });
+
+                closeButton_research.addEventListener("click", function() {
+                    modal_research.style.display = "none"; // モーダルを非表示にする
+                });
+
+                closeButton_active_1.addEventListener("click", function() {
+                    modal_active_1.style.display = "none"; // モーダルを非表示にする
+                });
+
+                closeButton_active_2.addEventListener("click", function() {
+                    modal_active_2.style.display = "none"; // モーダルを非表示にする
+                });
+
+                closeButton_active_3.addEventListener("click", function() {
+                    modal_active_3.style.display = "none"; // モーダルを非表示にする
+                });
+
+                closeButton_award.addEventListener("click", function() {
+                    modal_award.style.display = "none"; // モーダルを非表示にする
+                });
+                
+                // 他の要素がクリックされた時の処理（モーダル以外の部分をクリックした場合にモーダルを非表示にする）
+                window.addEventListener("click", function(event) {
+                    if (event.target == modal_product_all) {
+                        modal_product_all.style.display = "none"; // モーダルを非表示にする
+                    } else if (event.target == modal_product_1) {
+                        modal_product_1.style.display = "none"; // モーダルを非表示にする
+                    } else if (event.target == modal_product_2) {
+                        modal_product_2.style.display = "none"; // モーダルを非表示にする
+                    } else if (event.target == modal_product_3) {
+                        modal_product_3.style.display = "none"; // モーダルを非表示にする
+                    } else if (event.target == modal_research) {
+                        modal_research.style.display = "none"; // モーダルを非表示にする
+                    } else if (event.target == modal_active_1) {
+                        modal_active_1.style.display = "none"; // モーダルを非表示にする
+                    } else if (event.target == modal_active_2) {
+                        modal_active_2.style.display = "none"; // モーダルを非表示にする
+                    } else if (event.target == modal_active_3) {
+                        modal_active_3.style.display = "none"; // モーダルを非表示にする
+                    } else if (event.target == modal_award) {
+                        modal_award.style.display = "none"; // モーダルを非表示にする
+                    }
+                });
+            });
+            
+            </script>
+            
+            
+
+
+        <!-- 4ページ目 -->
+        <div class="page4">
+            <div id="Modal_research" class="modal">
+                <div class="modal-content">
+                    <div class="slideshow-container" style="width: 100%; max-width: 800px; height: 100%; max-height: 800px;">
+                        <div class="mySlides fade">
+                            <img src="web_assets/img/page4/1.png" alt="画像1">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="web_assets/img/page4/2.png" alt="画像2">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="web_assets/img/page4/3.png" alt="画像3">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="web_assets/img/page4/4.png" alt="画像4">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="web_assets/img/page4/5.png" alt="画像4">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="web_assets/img/page4/6.png" alt="画像4">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="web_assets/img/page4/7.png" alt="画像4">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="web_assets/img/page4/8.png" alt="画像4">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="web_assets/img/page4/9.png" alt="画像4">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="web_assets/img/page4/10.png" alt="画像4">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="web_assets/img/page4/11.png" alt="画像4">
+                        </div>
+                        
+                        <a class="prev" onclick="plusSlides(-1, 'mySlides')">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 'mySlides')">&#10095;</a>
+                    </div>
+
+                    <div class="no_slide" >
+                            <img src="web_assets/img/page4/1.png"style="width: 100%; max-width: 800px; height: 100%; max-height: 800px;" alt="画像1">
+                            <img src="web_assets/img/page4/2.png" style="width: 100%; max-width: 800px; height: 100%; max-height: 800px;"alt="画像2">
+                            <img src="web_assets/img/page4/3.png"style="width: 100%; max-width: 800px; height: 100%; max-height: 800px;" alt="画像3">
+                            <img src="web_assets/img/page4/4.png" style="width: 100%; max-width: 800px; height: 100%; max-height: 800px;"alt="画像4">
+                            <img src="web_assets/img/page4/5.png" style="width: 100%; max-width: 800px; height: 100%; max-height: 800px;"alt="画像4">
+                            <img src="web_assets/img/page4/6.png" style="width: 100%; max-width: 800px; height: 100%; max-height: 800px;"alt="画像4">
+                            <img src="web_assets/img/page4/7.png" style="width: 100%; max-width: 800px; height: 100%; max-height: 800px;"alt="画像4">
+                            <img src="web_assets/img/page4/8.png" style="width: 100%; max-width: 800px; height: 100%; max-height: 800px;"alt="画像4">
+                            <img src="web_assets/img/page4/9.png" style="width: 100%; max-width: 800px; height: 100%; max-height: 800px;"alt="画像4">
+                            <img src="web_assets/img/page4/10.png" style="width: 100%; max-width: 800px; height: 100%; max-height: 800px;"alt="画像4">
+                            <img src="web_assets/img/page4/11.png" style="width: 100%; max-width: 800px; height: 100%; max-height: 800px;"alt="画像4">
+                    </div>
+                    
+                    <script src="web_assets/js/script.js"></script>
+                    <button id="closeButton_research">閉じる</button>
+                </div>
+            </div>
+            <div class="page4_right">
+                <div class="page4_right1">
+                    入力音声の微小変化へのロバスト性を指標とした
+音声認識結果の信頼度推定手法
+                </div>
+                <div class="page4_right2">
+                    <div class="container2">
+                        <div class="container_stay2">
+                            <div class="container2">
+                                <span class="blurTrigger small_title2 blur">研</span>
+                                <h2 class="stay-text2 ">research</h2>
+                            </div>
+                            <div class="container_circle2" id="circle_room">
+                                <div class="circle1  openModal_research">
+                                    <svg viewBox="0 0 120 120">
+                                        <path d="M60,0
+                                                a60,60 0 1,1 0,120
+                                                a60,60 0 0,1 0,-120"></path>
+                                        <text x="60" y="60" >more</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5ページ目 -->
+        <div class="page5">
+            <div id="Modal_active_all" class="modal">
+                <!-- <div class="modal-content">
+                    <button id="closeButton_research">閉じる</button>
+                </div> -->
+            </div>
+            <div id="Modal_active_1" class="modal">
+                <div class="modal-content">
+                    <div class="detail2_all">
+                        <div class="title_name2">
+                            <!-- 留学 -->
+                            <div class="slideshow-container">
+                                <div class="mySlides1 fade">
+                                    <img src="web_assets/img/page5/cebu/1.jpg" alt="画像1">
+                                </div>
+                                <div class="mySlides1 fade">
+                                    <img src="web_assets/img/page5/cebu/2.jpg" alt="画像2">
+                                </div>
+                                <div class="mySlides1 fade">
+                                    <img src="web_assets/img/page5/cebu/3.jpg" alt="画像3">
+                                </div>
+                                <div class="mySlides1 fade">
+                                    <img src="web_assets/img/page5/cebu/4.jpg" alt="画像4">
+                                </div>
+                                <div class="mySlides1 fade">
+                                    <img src="web_assets/img/page5/cebu/5.jpg" alt="画像5">
+                                </div>
+                                <div class="mySlides1 fade">
+                                    <img src="web_assets/img/page5/cebu/6.jpg" alt="画像6">
+                                </div>
+                                <div class="mySlides1 fade">
+                                    <img src="web_assets/img/page5/cebu/7.jpg" alt="画像7">
+                                </div>
+                                <div class="mySlides1 fade">
+                                    <img src="web_assets/img/page5/cebu/8.jpg" alt="画像8">
+                                </div>
+                                <div class="mySlides1 fade">
+                                    <img src="web_assets/img/page5/cebu/9.jpg" alt="画像9">
+                                </div>
+                                <div class="mySlides1 fade">
+                                    <img src="web_assets/img/page5/cebu/10.jpg" alt="画像10">
+                                </div>
+                                <div class="mySlides1 fade">
+                                    <img src="web_assets/img/page5/cebu/11.jpg" alt="画像11">
+                                </div>
+                                
+                                <a class="prev" onclick="plusSlides(-1, 'mySlides1')">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1, 'mySlides1')">&#10095;</a>
+                            </div>
+                            
+                            <script src="web_assets/js/script.js"></script> 
+                        </div>
+
+                        
+                        <div class="detail2">
+                                <div class="detail2_top">
+                                    フィリピン(セブ島)に４週間留学経験があります．現地の人との交流を意識したことで，語学力の向上に加え，異なる文化に触れ，受け入れることで柔軟な考え方の基盤を身に着けました．また，リゾート地には足を運べませんでしたが、滞在地付近のスラム街や一般家庭などの様子からインフラストラクチャーの整備や技術の普及にはまだ格差があることを実感しました.さらに，現地の体育館に日本人3人で遊びに行き、そこでバドミントンをしていたら、偶然にもそこにいた現地の人と仲良くなりました。たくさんの方と試合ができて、友達にもなれ楽しい時間でした！
+                                </div>
+                                <!-- <div class="key2">
+                                    キーワード
+                                </div>
+                                <div class="key2_under">
+                                    <div class="key2_left">
+                                        <div class="key2_1">
+                                            Python
+                                        </div>
+                                        <div class="key2_2">
+                                            Shellscript
+                                        </div>
+                                    </div>
+                                    <div class="key2_right">
+                                        <div class="key2_3">
+                                            Linux
+                                        </div>
+                                        <div class="key2_4">
+                                            Git
+                                        </div>
+                                    </div>
+                                </div> -->
+                        </div>
+                    </div>
+                    <button id="closeButton_active_1">閉じる</button>
+                </div>
+            </div>
+
+            <div id="Modal_active_2" class="modal">
+                <div class="modal-content">
+                    <div class="detail2_all">
+                        <div class="title_name2">
+                            <!-- サークル -->
+                            <div class="slideshow-container">
+                                <div class="mySlides2 fade">
+                                    <img src="web_assets/img/page5/club/1.jpg" alt="画像1">
+                                </div>
+                                <div class="mySlides2 fade">
+                                    <img src="web_assets/img/page5/club/2.jpg" alt="画像2">
+                                </div>
+                                <div class="mySlides2 fade">
+                                    <img src="web_assets/img/page5/club/3.jpg" alt="画像3">
+                                </div>
+                                <div class="mySlides2 fade">
+                                    <img src="web_assets/img/page5/club/4.jpg" alt="画像4">
+                                </div>
+                                <div class="mySlides2 fade">
+                                    <img src="web_assets/img/page5/club/5.jpg" alt="画像5">
+                                </div>
+                                <div class="mySlides2 fade">
+                                    <img src="web_assets/img/page5/club/6.jpg" alt="画像6">
+                                </div>
+                                
+                                <a class="prev" onclick="plusSlides(-1, 'mySlides2')">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1, 'mySlides2')">&#10095;</a>
+                            </div>
+                            
+                            <script src="web_assets/js/script.js"></script> 
+                        </div>
+
+                        
+                        <div class="detail2">
+                                <div class="detail2_top">
+                                    関西大学と大阪大学のバドミントンサークルに入り、学内学外問わず、様々な大学・学部や年齢、地域や国の人と触れ合い、交流を深めました。運動会や、ハロウィンでの仮装、ドライブ企画など、大学生ならではのイベントも多数企画し、行いました！
+                                </div>
+                                <!-- <div class="key2">
+                                    キーワード
+                                </div>
+                                <div class="key2_under">
+                                    <div class="key2_left">
+                                        <div class="key2_1">
+                                            Python
+                                        </div>
+                                        <div class="key2_2">
+                                            Shellscript
+                                        </div>
+                                    </div>
+                                    <div class="key2_right">
+                                        <div class="key2_3">
+                                            Linux
+                                        </div>
+                                        <div class="key2_4">
+                                            Git
+                                        </div>
+                                    </div>
+                                </div> -->
+                        </div>
+                    </div>
+                    <button id="closeButton_active_2">閉じる</button>
+                </div>
+            </div>
+
+            <div id="Modal_active_3" class="modal">
+                <div class="modal-content">
+                    <div class="detail2_all">
+                        <div class="title_name2">
+                            <!-- ロボコン -->
+                            <div class="slideshow-container">
+                                <div class="mySlides3 fade">
+                                    <img src="web_assets/img/page5/robo/1.jpg" alt="画像1">
+                                </div>
+                                <div class="mySlides3 fade">
+                                    <img src="web_assets/img/page5/robo/2.jpg" alt="画像2">
+                                </div>
+                                
+                                <a class="prev" onclick="plusSlides(-1, 'mySlides3')">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1, 'mySlides3')">&#10095;</a>
+                            </div>
+                            
+                            <script src="web_assets/js/script.js"></script> 
+                        </div>
+
+                        
+                        <div class="detail2">
+                            <div class="key2">
+                                2022年度優勝<br>2023年度準優勝
+                            </div>
+                            <br>
+                                <div class="detail2_top">
+                                    他学科のロボコンチームに所属し，ロボカップジャパンオープン＠ホームリーグに参加しており，専門外の知識も広く学んでいます．担当は音声認識の部分です．ロボットが指示を聞き取り，タスクを行うというルール上，音声認識は重要な部分になります．深層学習を用いた認識を使用することで，音声認識精度を大幅に向上させること，開発側があらかじめ用意していない未知の内容の文章の認識が可能になりました．現在は，聞こえた文章をよりロボットが理解しやすい文章に書き換えることや，”here”などの不確定な単語に対して，聞き返すことや，文脈から予測できるような仕組みの精度向上に取り組んでいます． 
+                                </div>
+                                <!-- <div class="key2_under">
+                                    <div class="key2_left">
+                                        <div class="key2_1">
+                                            Python
+                                        </div>
+                                        <div class="key2_2">
+                                            Shellscript
+                                        </div>
+                                    </div>
+                                    <div class="key2_right">
+                                        <div class="key2_3">
+                                            Linux
+                                        </div>
+                                        <div class="key2_4">
+                                            Git
+                                        </div>
+                                    </div>
+                                </div> -->
+                        </div>
+                    </div>
+                    <button id="closeButton_active_3">閉じる</button>
+                </div>
+            </div>
+
+            <div class="product1-container">
+                <div class="container">
+                    <div class="container_stay">
+                        <div class="container1">
+                            <span class="blurTrigger small_title blur">活</span>
+                            <h2 class="stay-text">activities</h2>
+                        </div>
+                        <div class="container_circle1" id="circle_room">
+                            <a href="" target="_blank" class="circle1">
+                                <svg viewBox="0 0 120 120">
+                                    <path d="M60,0
+                                            a60,60 0 1,1 0,120
+                                            a60,60 0 0,1 0,-120"></path>
+                                    <text x="60" y="60">more</text>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product1">
+                    <img src="./web_assets/img/page5/5page_1.png" alt="myself_img">
+                    <div class="product1-text">
+                        <p><div class="product_name">留学</div></p>
+                        <p><div class="product_time">制作期間:4週間(2022)</div></p>
+                        <p><div class="product_people">フィリピンのセブ島にて</div></p>
+                        <p><div class="product_people">留学経験あり</div></p>
+                    </div>
+                    <div class="add-icon openModal_active_1">+</div>
+                </div>
+            </div>
+            <div class="product2">
+                <img src="./web_assets/img/page5/5page_2.png" alt="myself_img">
+                <div class="product2-text">
+                    <p><div class="product_name">サークル活動</div></p>
+                    <p><div class="product_time">大阪大学と関西大学の2つのインカレサークルに所属</div></p>
+                </div>
+                <div class="add-icon openModal_active_2">+</div>
+            </div>
+            <div class="product3">
+                <img src="./web_assets/img/page5/5page_3.png" alt="myself_img">
+                <div class="product3-text">
+                    <p><div class="product_name">ロボカップ<br>ジャパンオープン</div></p>
+                    <p><div class="product_time">TOYOTAのロボットHSRに
+                        システムを組み込み、競技に参加中</div></p>
+                </div>
+                <div class="add-icon openModal_active_3">+</div>
+            </div>
+        </div>
+
+        <!-- 6ページ目 -->
+        <div id="Modal_award" class="modal">
+            <div class="modal-content">
+                <div class="detail2_all">
+                    <div class="title_name2">
+                        <!-- 賞 -->
+                        <div class="slideshow-container" style="width: 100%; min-width: 100px ;max-width: 300px; height: 100%; max-height:600px;">
+                            <div class="mySlides4 fade">
+                                <img src="web_assets/img/page6/paper.jpg" alt="画像1">
+                            </div>
+                            
+                            <!-- <a class="prev" onclick="plusSlides(-1, 'mySlides4')">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1, 'mySlides4')">&#10095;</a> -->
+                        </div>
+                        
+                        <script src="web_assets/js/script.js"></script> 
+                    </div>
+
+                    
+                    <div class="detail6">
+                        <div class="key6">
+                            2023年度　学長賞
+                            <div class="key6_detail">
+                                ・ロボカップの功績
+                            </div>
+                        </div>
+
+                        <div class="key6">
+                            2020年度　学部長賞
+                            <div class="key6_detail">
+                                ・コロナ化におけるアプリケーションの大学内アイデアコンテスト：アプリ名「パーセン疎」
+                            </div>  
+                        </div>                      
+                        <div class="key6">
+                            ロボカップジャパンオープン<br>
+                            2022年度優勝 2023年度準優勝
+                        </div>
+                        <br>
+                            <!-- <div class="detail2_top">
+                                他学科のロボコンチームに所属し，ロボカップジャパンオープン＠ホームリーグに参加しており，専門外の知識も広く学んでいます．担当は音声認識の部分です．ロボッ
+                            </div> -->
+                            <!-- <div class="key2_under">
+                                <div class="key2_left">
+                                    <div class="key2_1">
+                                        Python
+                                    </div>
+                                    <div class="key2_2">
+                                        Shellscript
+                                    </div>
+                                </div>
+                                <div class="key2_right">
+                                    <div class="key2_3">
+                                        Linux
+                                    </div>
+                                    <div class="key2_4">
+                                        Git
+                                    </div>
+                                </div>
+                            </div> -->
+                    </div>
+                </div>
+                <button id="closeButton_award">閉じる</button>
+            </div>
+        </div>
+        <div class="page6">
+            <div class="award-container">
+                <div class="container6">
+                    <div class="container_stay6">
+                        <div class="container6">
+                            <span class="blurTrigger small_title6 blur">賞</span>
+                            <h2 class="stay-text6">awards</h2>
+                        </div>
+                        <div class="container_circle6" id="circle_room">
+                            <div class="circle1 openModal_award">
+                                <svg viewBox="0 0 120 120">
+                                    <path d="M60,0
+                                            a60,60 0 1,1 0,120
+                                            a60,60 0 0,1 0,-120"></path>
+                                    <text x="60" y="60">more</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="award">
+                    <img src="./web_assets/img/page6/6page.png" alt="myself_img">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="footer">
+        Created on March 8,2024
+    </div>
+</footer>
+</main>
+
+</html>

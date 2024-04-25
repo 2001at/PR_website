@@ -1,0 +1,121 @@
+.page2{
+    /* height: 100vh; */
+    padding-top: 20vh;
+    padding-bottom: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#efe9e4;
+    background-image: url("/web_assets/img/page2/page2_back.png"); /* 画像のファイルパスを指定します */
+    background-size: cover; /* 画像を表示する範囲に合わせて拡大縮小します */
+    background-position: center; /* 画像を中央に配置します */
+    background-repeat: no-repeat; /* 画像を繰り返し表示しません */
+    
+}
+.page2_under{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.first_catch{
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    background-color: lightblue;
+    font-size: 4vw;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 1vw;
+}
+
+
+.page2_right{
+    width: 40%;
+    margin:20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color:#efe9e4; */
+}
+
+
+.page2_left > img{
+    filter: brightness(120%) saturate(140%);
+	box-shadow: 20px 20px 0 #d8b814;
+    width: 90%;
+}
+
+.page2_left{
+    width: 40%;
+
+    /* background-color:#efe9e4; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.name{
+    font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+    margin-bottom: 20px;
+    font-size: 3vw;
+}
+
+.degree{
+    font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+    margin-bottom: 10px;
+    font-size: 2vw;
+}
+
+.age,.detail_1,.detail_2,.detail_3{
+    font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+    margin-bottom: 8px;
+    font-size: 1.5vw;
+}
+
+.social-icons a {
+    padding: 0 10px;
+    font-size:24px;
+}
+
+@media (max-width: 678px) {
+    .name{
+        font-size: 6vw;
+        margin-bottom: 10px;
+    }
+
+    .degree{
+        font-size: 4vw;
+        margin-bottom: 5px;
+    }
+
+    .age,.detail_1,.detail_2,.detail_3{
+        font-size: 3vw;
+        margin-bottom: 3px;
+    }
+
+    .page2{
+        /* height: 60vh; */
+        padding-top: 2vh;
+        align-items: center;
+    }
+    .page2_under{
+        /* height: 60vh; */
+        flex-direction: column;
+        padding-top: 5vh;
+        align-items: center;
+    }
+
+    .social-icons a {
+        padding: 0 px;
+        font-size:18px;
+        padding-bottom: 3px; 
+    }
+    .page2_right{
+    margin-top: 30px;
+        width: 80%;
+    }
+    
+    .page2_left{
+        width: 70%;
+    } 
+}
