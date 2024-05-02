@@ -28,6 +28,7 @@
     fill: black;
     font-size: 18px;
     pointer-events: none; 
+    text-decoration: underline; 
 }
 
 .circle1 a {
